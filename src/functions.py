@@ -26,6 +26,20 @@
 # use or other dealings in this Software without prior written
 # authorization.
 
-def testFunc(text):
+# Create variables
 
-        print("You entered: ", text)
+countTo         = 100       # Number to count up to
+fizzDivisor     = [4]       # To say Fizz if divisible by these
+buzzDivisor     = [5]       # To say Buzz if divisible by these
+fizzBuzzDivisor = [15]      # To say FizzBuzz if divisible by these
+
+def isNumFizz(currentNum):
+
+    for i in fizzDivisor :
+
+        if currentNum % i == 0:
+            continue
+        if currentNum % i != 0:
+            return False
+
+    return True

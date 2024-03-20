@@ -30,4 +30,7 @@ from .functions import *
 
 def main(argv):
 
-    testFunc("hellos")
+    if isNumFizz(3) == True:
+        print("True")
+    else:
+        print("False")
