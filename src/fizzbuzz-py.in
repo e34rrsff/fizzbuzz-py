@@ -30,6 +30,7 @@
 
 import sys
 
+
 pkgdatadir = '@pkgdatadir@'
 sys.path.insert(1, pkgdatadir)
 

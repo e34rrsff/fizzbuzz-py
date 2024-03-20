@@ -16,7 +16,6 @@ configure_file(
 )
 
 fizzbuzz_py_sources = [
-    '__init__.py',
     'main.py'
 ]
 
