@@ -16,7 +16,8 @@ configure_file(
 )
 
 fizzbuzz_py_sources = [
-    'main.py'
+    'main.py',
+    'functions.py',
 ]
 
 install_data(fizzbuzz_py_sources, install_dir: moduledir)
