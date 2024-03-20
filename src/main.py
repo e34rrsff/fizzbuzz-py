@@ -28,4 +28,4 @@
 
 def main(argv):
     """This statement prints Hello, World to your console"""
-    print("Hello World!")
+    print("Hello, World")
