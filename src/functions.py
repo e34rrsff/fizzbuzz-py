@@ -28,18 +28,51 @@
 
 # Create variables
 
-countTo         = 100       # Number to count up to
-fizzDivisor     = [4]       # To say Fizz if divisible by these
-buzzDivisor     = [5]       # To say Buzz if divisible by these
-fizzBuzzDivisor = [15]      # To say FizzBuzz if divisible by these
+countTo         = 100   # Number to count up to
+fizzDivisor     = 3     # To say Fizz if divisible by this
+buzzDivisor     = 5     # To say Buzz if divisible by this
+fizzBuzzDivisor = 15    # To say FizzBuzz if divisible by this
 
-def isNumFizz(currentNum):
+def sPF(currentNum):
 
-    for i in fizzDivisor :
+    if currentNum   % fizzDivisor == 0:
+        return True
 
-        if currentNum % i == 0:
-            continue
-        if currentNum % i != 0:
-            return False
+    elif currentNum % fizzDivisor != 0:
+        return False
 
-    return True
+def sPB(currentNum):
+
+    if currentNum   % buzzDivisor == 0:
+        return True
+
+    elif currentNum % buzzDivisor != 0:
+        return False
+
+def sPFB(currentNum):
+
+    if currentNum   % fizzBuzzDivisor == 0:
+        return True
+
+    elif currentNum % fizzBuzzDivisor != 0:
+        return False
+
+shouldPrint = {
+    "fizz"      : sPF,
+    "buzz"      : sPB,
+    "fizzbuzz"  : sPFB
+}
+
+def determineResult(i):
+
+    if shouldPrint["fizzbuzz"](i)       == True:
+        return "FizzBuzz"
+
+    elif shouldPrint["fizz"](i)     == True:
+        return "Fizz"
+
+    elif shouldPrint["buzz"](i) == True:
+        return "Buzz"
+
+    else:
+        return str(i)

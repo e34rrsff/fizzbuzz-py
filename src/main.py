@@ -26,11 +26,13 @@
 # use or other dealings in this Software without prior written
 # authorization.
 
+import sys
+
 from .functions import *
 
 def main(argv):
 
-    if isNumFizz(3) == True:
-        print("True")
-    else:
-        print("False")
+    for i in range(1, countTo + 1):
+
+        output = determineResult(i)
+        sys.stdout.write(output + "\n")
