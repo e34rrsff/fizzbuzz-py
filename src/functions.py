@@ -66,10 +66,10 @@ def determineResult(i):
     if shouldPrint["fizzbuzz"](i, fizzBuzzDivisor) == True:
         return "FizzBuzz"
 
-    elif shouldPrint["fizz"](i,fizzDivisor) == True:
+    elif shouldPrint["fizz"](i, fizzDivisor) == True:
         return "Fizz"
 
-    elif shouldPrint["buzz"](i,buzzDivisor) == True:
+    elif shouldPrint["buzz"](i, buzzDivisor) == True:
         return "Buzz"
 
     else:
