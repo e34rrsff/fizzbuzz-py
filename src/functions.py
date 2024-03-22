@@ -26,35 +26,33 @@
 # use or other dealings in this Software without prior written
 # authorization.
 
-# Create variables
-
 countTo         = 100   # Number to count up to
 fizzDivisor     = 3     # To say Fizz if divisible by this
 buzzDivisor     = 5     # To say Buzz if divisible by this
 fizzBuzzDivisor = 15    # To say FizzBuzz if divisible by this
 
-def sPF(currentNum):
+def sPF(CurrNum, FizzDiv):
 
-    if currentNum   % fizzDivisor == 0:
+    if CurrNum   % FizzDiv == 0:
         return True
 
-    elif currentNum % fizzDivisor != 0:
+    elif CurrNum % FizzDiv != 0:
         return False
 
-def sPB(currentNum):
+def sPB(CurrNum, BuzzDiv):
 
-    if currentNum   % buzzDivisor == 0:
+    if CurrNum   % BuzzDiv == 0:
         return True
 
-    elif currentNum % buzzDivisor != 0:
+    elif CurrNum % BuzzDiv != 0:
         return False
 
-def sPFB(currentNum):
+def sPFB(CurrNum, FizzBuzzDiv):
 
-    if currentNum   % fizzBuzzDivisor == 0:
+    if CurrNum   % FizzBuzzDiv == 0:
         return True
 
-    elif currentNum % fizzBuzzDivisor != 0:
+    elif CurrNum % FizzBuzzDiv != 0:
         return False
 
 shouldPrint = {
@@ -65,13 +63,13 @@ shouldPrint = {
 
 def determineResult(i):
 
-    if shouldPrint["fizzbuzz"](i)       == True:
+    if shouldPrint["fizzbuzz"](i, fizzBuzzDivisor) == True:
         return "FizzBuzz"
 
-    elif shouldPrint["fizz"](i)     == True:
+    elif shouldPrint["fizz"](i,fizzDivisor) == True:
         return "Fizz"
 
-    elif shouldPrint["buzz"](i) == True:
+    elif shouldPrint["buzz"](i,buzzDivisor) == True:
         return "Buzz"
 
     else:

@@ -34,5 +34,4 @@ def main(argv):
 
     for i in range(1, countTo + 1):
 
-        output = determineResult(i)
-        sys.stdout.write(output + "\n")
+        sys.stdout.write(determineResult(i) + "\n")
